@@ -1,0 +1,50 @@
+body {
+	font-family: 'Bangers', cursive;
+}
+
+
+
+header, footer {
+	width: 100%;
+	background-color: #EE6B10;
+	margin: 0 0 30px 0;
+}
+
+
+table {
+	width: 100%;
+
+}
+
+td {
+
+}
+
+tr {
+	width: 100%;
+/*	float: left;*/
+}
+
+.panelOne, .panelThree {
+
+	width: 25%;
+	height: 500px;
+}
+
+.panelTwo {
+
+	width: 40%;
+	height: 500px;
+
+}
+
+img {
+	width: 150px;
+	height: 150px;
+}
+
+.gameTitle {
+	text-align: center;
+	font-size: 1.8em;
+	margin: auto;
+}
