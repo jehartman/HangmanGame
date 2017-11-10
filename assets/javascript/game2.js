@@ -1,3 +1,7 @@
+//I can't figure out how to update the blanks in my game, and I didn't get to the scorekeeping part, though I'm guessing that's easier.
+//I'm sure this is not very dry or efficient code.
+
+//I had a lot more psuedocode in here but it got axed as I moved stuff around.
 
 // var newGame
 // var gameOver
@@ -46,42 +50,9 @@ function newGame () {
 			var blanks = document.getElementById("blanks");
 			blanks.innerHTML += "__ ";	
 			}
-//splits password into an array called splitpassword2
-		function splitPassword() {
-			console.log("splitPassword ran");
-			console.log(currentPassword);
-			//put currentpassword into an array
-			var splitPassword = currentPassword.split("");
-			console.log(splitPassword);
-			var splitPassword2 = splitPassword;
-
-			//this should determine the index of the userGuess
-//thisis not checking the userguess against the array....
-			for (i=0; i < splitPassword.length; i++) {
-				console.log(splitPassword.length);
-				// var letter = splitPassword[i];
-				console.log(userGuess);
-				if (splitpassword.indexOf(userGuess) !== -1) {
-					console.log(letter + "is in the password");
-					// splitPassword2[i] = userGuess;
-					// console.log("the split password is" + index);
-					}
-				else {
-					splitPassword2[i]= "__ ";
-					}
-				}// end of for loop
-
-			if (splitPassword[i] !== userGuess) {
-				splitPassword2.splice(i, 1);
-				console.log(splitPassword2);
-				splitPassword2.splice(i, 1, "__");
-				console.log(splitPassword2);
-				}
 
 
-		}//end of splitpassword
 
-	splitPassword ();
 
 
 
@@ -98,6 +69,41 @@ function newGame () {
 		updateLetters();
 
 
+		function splitPassword() {
+			console.log("splitPassword ran");
+			console.log(currentPassword);
+			//put currentpassword into an array
+			var splitPassword = currentPassword.split("");
+			console.log(splitPassword);
+			var splitPassword2 = splitPassword;
+
+
+			for (i=0; i < splitPassword.length; i++) {
+				console.log(splitPassword.length);
+				// var letter = splitPassword[i];
+				console.log(userGuess);
+				console.log(splitPassword.indexOf(userGuess));
+				if (splitPassword.indexOf(userGuess) !== -1) {
+					console.log(userGuess + " is in the password");
+					console.log(lettersGuessed);
+
+
+
+			}
+					}
+	
+
+			if (splitPassword[i] !== userGuess) {
+				splitPassword2.splice(i, 1);
+				console.log(splitPassword2);
+				splitPassword2.splice(i, 1, "__");
+				console.log(splitPassword2);
+				}
+
+
+		}//end of splitpassword
+
+	splitPassword ();
 
 	
 
@@ -131,82 +137,3 @@ function updateLetters () {
 
 newGame();
 
-//I need to take the blank creation part out of the part that fires when the key is pressed.  Blanks are only created at the start of each game
-
-
-
-
-	//compare each letter
-
-
-
-
-		//compare each letter in array to userguess
-		//for each letter append either __ or the letter to the span
-
-
-
-
-
-
-
-
-
-
-// joinArray (lettersUnpicked);
-
-
-// document.getElementById("newPassword").onclick = function() {choosePassword()};
-
-// function () {
-
-// }
-
-
-// for each item in array, print either __ or value depending on if the value is a lettersUnpicked
-
-
-//stringname.split("")
-
-			// console.log("match");
-			// splitPassword2.splice(i, 1);
-			// console.log(splitPassword2);
-			// splitPassword2.splice(i, 0, userGuess);
-			// console.log(splitPassword2);
-
-
-	// 	else {
-
-	// 		splitPassword2.splice(i, 1);
-	// 		console.log(splitPassword2);
-	// 		splitPassword2.splice(i, 1, "__");
-	// 		console.log(splitPassword2);
-
-	// }
-
-			//instead replace objects in array
-
-
-//         var my_array = [1,3,4];
-//         var start_index = 1;
-//         var number_of_elements_to_remove = 0;
-//         my_array.splice(start_index, number_of_elements_to_remove, 2);
-//         console.log(my_array);
-
-
-
-//The update password function below works but I'm trying another method
-
-	// function updatePassword () {
-	// 		console.log("updatePassword ran");
-	// 		for (i=0; i < currentPassword.length; i++) {
-	// 			var character = currentPassword.charAt(i);
-	// 			console.log("character is" + character);
-	// 			console.log("user guess is" + userGuess);
-	// 			if (character === userGuess) {
-	// 				console.log("character equals user guess");
-	// 				//replace a blank with the userGuess
-	// 				}
-	// 		}
-
-	// 	}
