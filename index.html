@@ -5,14 +5,15 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<title>Stump the Trump</title>
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Anton|Bangers|Freckle+Face|Just+Me+Again+Down+Here" rel="stylesheet"
 </head>
 <body>
 	<header>
 		<table>
 			<tr>
-				<td><img class="flanking" src="assets/images/stump3.jpg" alt="stump"></td>
-				<td><span class="gameTitle">STUMP THE TRUMP!</span></td>
-				<td><img class="flanking" src="assets/images/trump1.jpg" alt="trump"></td>
+				<td><img id="stump" src="assets/images/stump3.jpg" alt="stump"></td>
+				<td><span id="gameTitle">STUMP<br>THE<br>TRUMP!</span></td>
+				<td><img id="trumpTop" src="assets/images/trump1.jpg" alt="trump"></td>
 			</tr>		
 		</table>
 
@@ -22,36 +23,43 @@
 	<table>
 		<tr class="bigrow">
 				<td class="panelOne">
-					Instructions
+					<h2>Instructions</h2>
+					<p>Oh no! The Special Prosecutor thinks that Trump may have committed a crime.</p>
+					<p> You are a detective assigned the case. You have ten guesses to figure out the letters in Trump's email password. Each email account you crack will lengthen his sentence.</p>
+					<p> Good luck-- the country is counting on you.</p>
 				</td>
 
 				<td class="panelTwo">
 					<table>
 						<tr>
-							<td class="gameRow">
-								<img src="assets/images/trump4.jpg" alt="trump">
+							<td>
+								<img id="trumpBottom" src="assets/images/trump4A.jpg" alt="trump">
 							</td>
-						</tr>
+							<td>
+								<span id="trumpSays">That letter must have been leaked!</span></td>
+							</tr>
 						<tr>
 							<td class="gameRow">
-								<p>__ __ __ __ __</p>
+								<p id="blanks"></p>
 								<p>Guesses Remaining: <span>10</span></p>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<button id="button">Generate New Trump Password</button>
+								<button id="button">Break Into Another Trump Account</button>
 							</td>
 						</tr>
 					</table>
 				</td>
 
 				<td class="panelThree">
-					<p>Attempts at Prosecution: <span id="attempts">0</span> attempts</p>
-					<p>Cumulative Prison Sentence: <span id="prison">0</span> years</p>
-					<p>Crimes Gotten Away With: <span id="losses">0</span> crimes</p>
-					<p>Letters Guessed: <span id="alreadyPicked"></span></p>
-					<p>Letters Remaining: <span id="notYetPicked"></span></p>
+					<p>Letters Guessed: <br><span id="alreadyPicked"></span></p>
+					<p>Letters Remaining: <br><span id="notYetPicked"></span></p>
+					<br><br>
+					<p>Attempts at Prosecution: <span id="attempts">0</span></p>
+					<p>Years Sentenced to Prison: <span id="prison">0</span></p>
+					<p>Crimes Gotten Away With: <span id="losses">0</span></p>
+
 				</td>
 					
 			</tr>

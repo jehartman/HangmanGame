@@ -1,19 +1,32 @@
 body {
 	font-family: 'Bangers', cursive;
+	background-color: #ffe07a;
+	line-height: 1.5;
+	background-image: url(../images/putinYellow.png);
+	background-size: 15%;
 }
 
 
 
-header, footer {
+header {
+	box-sizing: border-box;
 	width: 100%;
 	background-color: #EE6B10;
-	margin: 0 0 30px 0;
+	margin: 0 0 10px 0;
+	border: 6px solid #8F421C;
+	font-size: 2.4em;
+	text-align: center;
+	line-height: 1;
 }
 
+footer {
+	text-align: center;
+	padding: 40px 0 20px 0;
+	font-size: .5em;
+}
 
 table {
 	width: 100%;
-
 }
 
 td {
@@ -26,25 +39,56 @@ tr {
 }
 
 .panelOne, .panelThree {
-
-	width: 25%;
-	height: 500px;
+	font-size: .8em;
+/*	font-weight: 200;*/
+	width: 30%;
+	height: 280px;
+	font-family: 'Bangers', cursive;
+	padding: 0 5px;
 }
 
 .panelTwo {
 
 	width: 40%;
-	height: 500px;
+	height: 280px;
 
 }
 
-img {
+#stump {
+	width: 140px;
+	height: 140px;
+}
+
+#trumpTop {
 	width: 150px;
 	height: 150px;
 }
 
+#trumpBottom {
+	width: 110px;
+	height: 130px;
+	margin: 20px;
+}
 .gameTitle {
 	text-align: center;
 	font-size: 1.8em;
 	margin: auto;
+}
+
+#trumpSays {
+	font-size: 1em;
+/*	line-height: 0 !important;*/
+/*	padding: 0 5px 40px 5px;*/
+	font-family: "Just Me Again Down Here", cursive;
+	color: red;
+}
+
+button {
+	font-family: 'Bangers', cursive;
+	font-size: .8em;
+}
+
+h2 {
+	font-family: 'Bangers', cursive;
+	text-decoration: underline;
 }
