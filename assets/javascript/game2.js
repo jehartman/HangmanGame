@@ -30,12 +30,13 @@ var pastMisses = [];
 var missCount = 0;
 var missLimit = 10;
 var gameOver = false;
-var gamesPlayed = 0;
+var gamesPlayed = -1;
 var updatedPassword = [];
 
 
 function newGame () {
 	console.log("newGame ran");
+	gamesPlayed++;
 	gameOver = false;
 	setPassword ();
 
@@ -49,7 +50,7 @@ function newGame () {
 		for (i=0; i < passwordLength; i++) {
 			var blanks = document.createElement("span");
 			//var d = document.getElementById("div1");
-			blanks.className = "blank" + i;
+			blanks.className = "blank blank" + i;
 			var singleBlank = document.createTextNode("__ ");
 			blanks.appendChild(singleBlank);
 			var blanksContainer = document.getElementById("blanks");
@@ -60,8 +61,8 @@ function newGame () {
 
 
 	document.onkeyup = function (event) {
-		userGuess = event.key;
-		//need to convert userGuess to lower case
+		userGuess = event.key.toLowerCase();
+		updateLetters();
 		for (i=0; i<lettersUnpicked.length; i++)
 		if (userGuess === lettersUnpicked[i]) {
 			console.log(userGuess);
@@ -69,7 +70,7 @@ function newGame () {
 			console.log(userGuessIndex);
 			lettersUnpicked.splice(i, 1);
 			}
-		updateLetters();
+
 
 
 		function splitPassword() {
@@ -117,21 +118,26 @@ function newGame () {
 	} //end of setPassword
 
 function joinArray (array) {
-	joinedArray = array.join("  ");
+	joinedArray = array.join("  "); 
 	var result = joinedArray;
 	console.log(joinedArray);
 }
 
 
 function updateLetters () {
+	console.log(userGuess);
 	console.log("updateLetters ran");
-	lettersGuessed.push(userGuess);
-	joinArray (lettersGuessed);
-	var joinedArray2 = document.getElementById("alreadyPicked");
-	joinedArray2.textContent = joinedArray;
-	joinArray(lettersUnpicked);
-	var joinedArray2 = document.getElementById("notYetPicked");
-    joinedArray2.textContent = joinedArray;
+	console.log(lettersUnpicked);
+	console.log(lettersUnpicked.indexOf(userGuess));
+		if (lettersUnpicked.indexOf(userGuess) !== -1) {
+			lettersGuessed.push(userGuess);
+			joinArray (lettersGuessed);
+			var joinedArray2 = document.getElementById("alreadyPicked");
+			joinedArray2.textContent = joinedArray;
+			joinArray(lettersUnpicked);
+			var joinedArray2 = document.getElementById("notYetPicked");
+		    joinedArray2.textContent = joinedArray;
+			}
 
 } //end of updateLetters
 

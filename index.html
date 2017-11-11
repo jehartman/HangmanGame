@@ -25,27 +25,29 @@
 				<td class="panelOne">
 					<h2>Instructions</h2>
 					<p>Oh no! The Special Prosecutor thinks that Trump may have committed a crime.</p>
-					<p> You are a detective assigned the case. Press a key to guess a letter in Trump's email password. Guess them all and Trump gets another year on his sentence. Guess wrong three times and Trump deletes that account.</p>
+					<p> You are a detective assigned the case. Press a key to guess a letter in Trump's email password. Guess them all and Trump gets another year on his sentence. Guess wrong ten times and Trump deletes that account.</p>
 					<p> Good luck-- the country is counting on you.</p>
 				</td>
 
 				<td class="panelTwo">
 					<table>
 						<tr>
-							<td>
+							<td id="trumpContainer">
 								<img id="trumpBottom" src="assets/images/trump4A.jpg" alt="trump">
+								<br>
+
+								<span id="trumpSays" class="blank">That letter was leaked!</span>
 							</td>
-							<td>
-								<span id="trumpSays">That letter must have been leaked!</span></td>
-							</tr>
+						</tr>
 						<tr>
 							<td class="gameRow">
 								<p id="blanks"></p>
-								<p>Guesses Remaining: <span>10</span></p>
+								<p class="blank">Guesses Remaining: <span>10</span></p>
 							</td>
 						</tr>
 						<tr>
 							<td>
+								<br>
 								<button id="button">Break Into Another Trump Account</button>
 							</td>
 						</tr>
