@@ -22,7 +22,7 @@
 // 	if number of guesses exceeded, game is done
 
 var passwordList = ["putin", "russia", "maga", "bigly", "phony", "crooked", "loser", "winning", "bad", "huge", "tremendous", "classy", "sad", "fake", "overrated"];
-var lettersUnpicked = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
+var lettersUnpicked = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var currentPassword;
 var lettersGuessed = [];
 var userGuess;
@@ -50,10 +50,11 @@ function newGame () {
 		for (i=0; i < passwordLength; i++) {
 			var blanks = document.createElement("span");
 			//var d = document.getElementById("div1");
-			blanks.className = "blank blank" + i;
+			blanks.className = "blank";
+			blanks.id = "blank" + i;
 			var singleBlank = document.createTextNode("__ ");
 			blanks.appendChild(singleBlank);
-			var blanksContainer = document.getElementById("blanks");
+			var blanksContainer = document.getElementById("blanksContainer");
 			blanksContainer.appendChild(blanks);
 			}
 
@@ -73,8 +74,8 @@ function newGame () {
 
 
 
-		function splitPassword() {
-			console.log("splitPassword ran");
+		function checkPassword() {
+			console.log("checkPassword ran");
 			console.log(currentPassword);
 			//put currentpassword into an array
 			var splitPassword = currentPassword.split("");
@@ -87,28 +88,42 @@ function newGame () {
 				// var letter = splitPassword[i];
 				console.log(userGuess);
 				console.log(splitPassword.indexOf(userGuess));
+							// this will check if the guess if correct and update the blanks and the trump blurb
 				if (splitPassword.indexOf(userGuess) !== -1) {
+					console.log(splitPassword.indexOf(userGuess));
+					console.log(i);
 					console.log(userGuess + " is in the password");
-					console.log(lettersGuessed);
+					splitPassword2.splice(i, 1, userGuess);
+					console.log(splitPassword2);
+					document.getElementById("blank" + i).innerHTML = splitPassword[i];
+					}//end if
+				else {
+
+					splitPassword2.splice(i, 1, "__ ");
+					}//end else
+				// for (j=0; j<splitPassword2.length; j++) {
+				// 	console.log(splitPassword2[j]);
+				// 	if (splitPassword2[j] === userGuess) {
+				// 		console.log("it's a match");
+
+				// 	}
+				// }
 
 
-
-			}
-					}
+				
+				}// end if
 	
 
 			if (splitPassword[i] !== userGuess) {
 				splitPassword2.splice(i, 1);
 				console.log(splitPassword2);
 				splitPassword2.splice(i, 1, "__");
-				}
+					}
 
 
-		}//end of splitpassword
+			}//end of checkPassword
 
-	splitPassword ();
-
-	
+		checkPassword ();
 
 
 
@@ -121,7 +136,7 @@ function joinArray (array) {
 	joinedArray = array.join("  "); 
 	var result = joinedArray;
 	console.log(joinedArray);
-}
+} //end of joinarray
 
 
 function updateLetters () {
@@ -137,9 +152,9 @@ function updateLetters () {
 			joinArray(lettersUnpicked);
 			var joinedArray2 = document.getElementById("notYetPicked");
 		    joinedArray2.textContent = joinedArray;
-			}
+			} //if end
 
-} //end of updateLetters
+	} //end of updateLetters
 
 } //end of newgame
 

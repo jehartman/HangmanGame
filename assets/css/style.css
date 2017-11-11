@@ -20,8 +20,11 @@ header {
 }
 
 footer {
+	border-top: 1px solid #8F421C;
+	margin-top: 25px;
+	background-color: #FFD95C;
 	text-align: center;
-	padding: 40px 0 20px 0;
+	padding: 10px 0 10px 0;
 	font-size: .5em;
 }
 
@@ -68,7 +71,7 @@ h2 {
 
 }
 
-#blanks {
+.blanks {
  	text-align: center;
 }
 
