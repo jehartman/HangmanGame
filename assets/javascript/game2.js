@@ -47,11 +47,14 @@ function newGame () {
 		var passwordLength = currentPassword.length;
 		console.log(passwordLength);
 		for (i=0; i < passwordLength; i++) {
-			var blanks = document.getElementById("blanks");
-			blanks.innerHTML += "__ ";	
+			var blanks = document.createElement("span");
+			//var d = document.getElementById("div1");
+			blanks.className = "blank" + i;
+			var singleBlank = document.createTextNode("__ ");
+			blanks.appendChild(singleBlank);
+			var blanksContainer = document.getElementById("blanks");
+			blanksContainer.appendChild(blanks);
 			}
-
-
 
 
 
@@ -97,7 +100,6 @@ function newGame () {
 				splitPassword2.splice(i, 1);
 				console.log(splitPassword2);
 				splitPassword2.splice(i, 1, "__");
-				console.log(splitPassword2);
 				}
 
 
