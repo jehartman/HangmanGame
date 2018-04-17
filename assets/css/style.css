@@ -1,113 +1,180 @@
+/*organized alphabetically by:;
+	element
+	class
+	id
+*/
+
+/**************************ELEMENTS***************************/
+
 body {
-	font-family: 'Bangers', cursive;
-	background-color: #ffe07a;
-	line-height: 1.5;
-	background-image: url(../images/putinYellow.png);
-	background-size: 15%;
+	font-family: 'PT Sans', sans-serif;
+	font-size: .8em;
+	color: #647901;
+	background-repeat: repeat;
+	background-color: black;
+	margin: 0;
+	padding-bottom: 70px;
+	height: 100%;
 }
 
-
-
 header {
+	font-family: 'Bangers', cursive;
+	font-size: 2.5em;
+	text-align: center;
+	text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+	line-height: 1;
+	background-color: #ffe89d;
+	background-image: url("../images/bars2.jpg");
 	box-sizing: border-box;
 	width: 100%;
-	background-color: #EE6B10;
 	margin: 0 0 10px 0;
-	border: 6px solid #8F421C;
-	font-size: 2.4em;
-	text-align: center;
-	line-height: 1;
+	border-bottom: 3px solid black;
+	padding-top: 20px;
 }
 
 footer {
+	font-size: 1em;
+	text-align: center;
 	border-top: 1px solid #8F421C;
 	margin-top: 25px;
+	background-image: url("../images/bars2.jpg");
 	background-color: #FFD95C;
-	text-align: center;
-	padding: 10px 0 10px 0;
-	font-size: .5em;
+	padding: 25px 0 25px 0;
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
+
 
 table {
 	width: 100%;
 }
 
-td {
-	text-align: center;
-}
-
-tr {
-	width: 100%;
-}
-
-
 button {
-	font-family: 'Bangers', cursive;
-	font-size: .8em;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	color: white;
+	background-color: #3366cc;
+	margin: 10px auto;
 }
 
-h2 {
-	font-family: 'Bangers', cursive;
-	text-decoration: underline;
-}
+/***************************CLASSES*********************/
 
 .blank {
 	margin: auto;
-}
-
-.panelOne, .panelThree {
-	font-size: .8em;
-/*	font-weight: 200;*/
-	width: 30%;
-	height: 280px;
-	font-family: 'Bangers', cursive;
-	padding: 0 5px;
-}
-
-.panelTwo {
-
-	width: 40%;
-	height: 280px;
-
 }
 
 .blanks {
  	text-align: center;
 }
 
-#stump {
-	width: 140px;
-	height: 140px;
+.fontLarge {
+	font-size: 1.5em;
 }
 
-#trumpTop {
-	width: 150px;
-	height: 150px;
+.gameRow {
+	width: 100%;
 }
 
-#trumpBottom {
-	width: 50%;
-	height: 50%
-	margin: 20px;
-}
 .gameTitle {
 	text-align: center;
 	font-size: 1.8em;
 	margin: auto;
 }
 
-#trumpSays {
-	font-size: 1em;
-/*	line-height: 0 !important;*/
-/*	padding: 0 5px 40px 5px;*/
-	font-family: "Just Me Again Down Here", cursive;
+.greenHighlight {
+	color: green;
+	background-color: yellow;
+}
+
+.guessRow {
+	width: 50%;
+	padding-bottom: 20px;
+}
+
+.invisible {
+	display: none;
+}
+
+.red {
 	color: red;
 }
 
-#trumpContainer {
-	width: 10%;
+.redHighlight {
+	color: red;
+	background-color: yellow;
 }
 
-.gameRow {
+.stats {
+	padding: 20px;
+	background-color: lightgrey;
+}
+
+/***************************IDS***************************/
+
+#blanksContainer {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 900;
+}
+
+
+#feedback {
+	height: 15px;
+	font-size: 1em;
+}
+
+#footer {
+	background-color: white;
+	margin: 0 auto;
+	width: 25%;
+}
+
+#game {
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+}
+
+#hacker {
+	width: 70px;
+	height: 70px;
+}
+
+#handcuffs {
+	width: 90px;
+	height: 75px;
+}
+
+#panelOne {
+	font-size: 1em;
+	width: 85%;
+	margin: 10px auto 40px;
+	padding: 0px 30px 0;
+}
+
+#panelThree {
+	font-size: 1em;
+	text-align: center;
+	width: 85%;
+	padding: 0 10px;
+	margin: 10px auto;
+}
+
+#panelTwo {
+	text-align: center;
+	width: 85%;
+	margin: 10px auto;
+}
+
+#panelWrapper {
+	margin: 10px 20px;
+	background-color: #fff;
+	padding-bottom: 30px;
+	border: 4px solid grey;
+}
+
+#parent {
+	padding: 5px 10px;
 	width: 100%;
 }
+

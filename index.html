@@ -1,81 +1,95 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<title>Stump the Trump</title>
-	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Anton|Bangers|Freckle+Face|Just+Me+Again+Down+Here" rel="stylesheet"
+	<title>Book the Crook</title>
 </head>
 <body>
 	<header>
 		<table>
 			<tr>
-				<td><img id="stump" src="assets/images/stump3.jpg" alt="stump"></td>
-				<td><span id="gameTitle">STUMP<br>THE<br>TRUMP!</span></td>
-				<td><img id="trumpTop" src="assets/images/trump1.jpg" alt="trump"></td>
+				<td><img id="hacker" src="assets/images/hacker2.png" alt="hacker"></td>
+				<td><span id="gameTitle">BOOK THE CROOK!</span></td>
+				<td><img id="handcuffs" src="assets/images/handcuffs.png" alt="handcuffs"></td>
 			</tr>		
 		</table>
-
 	</header>
 
-<div class="container">
-	<table>
-		<tr class="bigrow">
-				<td class="panelOne">
-					<h2>Instructions</h2>
-					<p>Oh no! The Special Prosecutor thinks that Trump may have committed a crime.</p>
-					<p> You are a detective assigned the case. Press a key to guess a letter in Trump's email password. Guess them all and Trump gets another year on his sentence. Guess wrong ten times and Trump deletes that account.</p>
-					<p> Good luck-- the country is counting on you.</p>
-				</td>
-
-				<td class="panelTwo">
-					<table>
-						<tr>
-							<td id="trumpContainer">
-								<img id="trumpBottom" src="assets/images/trump4A.jpg" alt="trump">
-								<br>
-
-								<span id="trumpSays" class="blank">That letter was leaked!</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="gameRow">
-								<p id="blanksContainer"></p>
-								<p class="blank">Guesses Remaining: <span>10</span></p>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<br>
-								<button id="button">Break Into Another Trump Account</button>
-							</td>
-						</tr>
-					</table>
-				</td>
-
-				<td class="panelThree">
-					<p>Letters Guessed: <br><span id="alreadyPicked"></span></p>
-					<p>Letters Remaining: <br><span id="notYetPicked"></span></p>
-					<br><br>
-					<p>Attempts at Prosecution: <span id="attempts">0</span></p>
-					<p>Years Sentenced to Prison: <span id="prison">0</span></p>
-					<p>Crimes Gotten Away With: <span id="losses">0</span></p>
-
-				</td>
-					
-			</tr>
-
-	</table>
-
+<div id='panelWrapper'>
+	<div id="panelOne">
+		<h2>Instructions</h2>
+		<p>Oh no! The prosecutor thinks that a hacker may have committed a cyber crime. You are a detective assigned the case. Press a key to guess a letter in the crook's email password. Guess them all and the offender gets another year on his sentence. Be careful-- after ten guesses the crook deletes that account.</p>
+	</div>
+	<div id='panelTwo'>
+		<div class="gameRow">
+			<p id="blanksContainer"></p>
+			<p class='fontLarge'>Guesses Remaining: <span id="remaining">10</span></p>
+			<p id='feedback'></p>
+		</div>
+	</div>
+	<div id="panelThree">
+		<table>
+			<tbody>
+				<tr>
+					<td class='guessRow fontLarge'>
+						Letters Guessed:
+					</td>
+					<td class='guessRow fontLarge'>
+						Letters Remaining:
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span id="alreadyPicked"></span>
+					</td>
+					<td>
+						<span id="notYetPicked"></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<tbody>
+				<tr>
+					<td  class='stats'>
+						Attempts at Prosecution:
+					</td>
+					<td  class='stats'>
+						Years Sentenced to Prison:
+					</td>
+					<td  class='stats'>
+						Crimes Gotten Away With:
+					</td>
+				</tr>
+				<tr>
+					<td  class='stats'>
+						<span id="attempts">0</span>
+					</td>
+					<td  class='stats'>
+						<span id="wins">0</span>
+					</td>
+					<td  class='stats'>
+						<span id="losses">0</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>
+			<button class='invisible' id="button">Break Into Another Hacker Account</button>
+		</div>
+	</div>
 </div>
 
-<footer>Copyright Jeff Hartman 2017</footer>
 
+<footer>
+	<div id='footer'>Copyright Jeff Hartman 2017</div>
+</footer>
 
-
-<script src="assets/javascript/game2.js"></script>
-
+<script src="assets/javascript/game.js"></script>
 	
 </body>
+
 </html>
